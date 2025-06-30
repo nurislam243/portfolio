@@ -4,33 +4,35 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen bg-gray-50 flex items-center justify-center px-6 py-16"
+      className="min-h-screen bg-base-200 flex items-center justify-center px-6 py-16"
     >
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold text-[#4A148C] mb-6 text-center">
+      <div className="max-w-7xl px-4 mx-auto">
+        <h2 className="text-4xl font-bold text-primary mb-10 text-center">
           About Me
         </h2>
 
-        <div className="flex flex-col md:flex-row items-center gap-10">
+        <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Left - Text */}
-          <div className="flex-1 text-gray-700 text-lg space-y-6">
+          <div className="flex-1 prose prose-primary text-base bg-base-100 p-5 rounded-lg shadow-lg">
             <p>
-              Hello! I'm <span className="font-semibold text-[#4A148C]">Md. Nur Islam</span>, a passionate MERN stack developer focused on crafting modern, scalable, and user-friendly web applications.
+              Hello! I'm <span className="font-semibold text-primary">Md. Nur Islam</span>, a passionate MERN stack developer focused on crafting modern, scalable, and user-friendly web applications.
             </p>
+            <br />
             <p>
               With experience in MongoDB, Express.js, React, and Node.js, I build responsive and performant interfaces while ensuring clean and maintainable backend services.
             </p>
+            <br />
             <p>
               I love continuous learning and applying new technologies to solve real-world problems and improve user experience.
             </p>
           </div>
 
           {/* Right - Skills */}
-          <div className="flex-1 bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-semibold text-[#4A148C] mb-4 text-center">
+          <div className="flex-1 bg-base-100 p-8 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-semibold text-primary mb-6 text-center">
               Skills & Technologies
             </h3>
-            <ul className="list-disc list-inside space-y-2 text-gray-700 text-base">
+            <ul className="list-disc list-inside space-y-3 text-base text-gray-700">
               <li>React.js & Redux</li>
               <li>Node.js & Express.js</li>
               <li>MongoDB & Mongoose</li>

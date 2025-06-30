@@ -1,10 +1,12 @@
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import nur from '../../assets/nurislam1.png'
 
 const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen bg-gradient-to-r from-[#4A148C] to-[#6A1B9A] flex items-center justify-center px-6"
+      className="min-h-screen bg-gradient-to-r from-primary/40 to-secondary/40 flex items-center justify-center px-6"
     >
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -14,11 +16,11 @@ const Home = () => {
       >
         <div className="flex-1 text-center md:text-left">
           <h1 className="text-5xl font-extrabold tracking-wide">
-            Hi, I'm <span className="text-green-500">Md. Nur Islam</span>
+            Hi, I'm <span className="text-secondary">Md. Nur Islam</span>
           </h1>
           <h2 className="text-3xl font-semibold mt-3">
             Crafting seamless web experiences with{' '}
-            <span className="underline decoration-green-500">MERN Stack magic</span>
+            <span className="underline decoration-secondary">MERN Stack magic</span>
           </h2>
           <p className="mt-6 max-w-md mx-auto md:mx-0 text-lg font-light">
             Passionate about building user-friendly, responsive, and accessible web interfaces that make a difference.
@@ -29,13 +31,36 @@ const Home = () => {
             <a
               href="/resume.pdf"
               download
-              className="bg-green-500 text-white font-semibold px-8 py-3 rounded shadow-lg hover:bg-green-600 transition"
+              className="btn btn-secondary btn-wide text-white font-semibold shadow-lg hover:shadow-xl"
             >
               Download Resume
             </a>
 
             <div className="flex space-x-8 text-3xl">
-              {/* social icons */}
+              <a
+                href="https://github.com/nurislam243"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-secondary transition-colors"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="https://linkedin.com/in/md-nur-islam-360b372a0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-secondary transition-colors"
+              >
+                <FaLinkedin />
+              </a>
+              <a
+                href="https://twitter.com/yourhandle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-secondary transition-colors"
+              >
+                <FaTwitter />
+              </a>
             </div>
           </div>
         </div>
@@ -46,11 +71,15 @@ const Home = () => {
           transition={{ delay: 0.5, duration: 1 }}
           className="flex-1"
         >
-          <img
-            src="https://via.placeholder.com/350"
-            alt="Nur Islam"
-            className="rounded-full shadow-2xl mx-auto"
-          />
+          <div className="avatar mx-auto md:mx-0">
+            <div className="w-60 rounded-full ring ring-secondary ring-offset-base-100 ring-offset-2 shadow-lg">
+              <img
+                src={nur}
+                alt="Md Nur Islam"
+                loading="lazy"
+              />
+            </div>
+          </div>
         </motion.div>
       </motion.div>
     </section>

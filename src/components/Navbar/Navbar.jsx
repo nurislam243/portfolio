@@ -14,15 +14,20 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-[#4A148C] text-white z-50 shadow-md">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <header className="fixed bg-primary h-[79px] top-0 left-0 w-full z-50 shadow-lg">
+      <div className="navbar text-primary-content max-w-7xl mx-auto px-4 py-4 flex justify-between">
         {/* Logo */}
-        <Link to="home" smooth duration={500} className="text-2xl font-bold cursor-pointer">
-          Nur<span className="text-cyan-400">Islam</span>
+        <Link
+          to="home"
+          smooth
+          duration={500}
+          className="btn btn-ghost normal-case text-3xl font-bold cursor-pointer"
+        >
+          Nur<span className="text-secondary">Islam</span>
         </Link>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-6 font-medium">
+        <nav className="hidden md:flex space-x-8 font-semibold text-lg">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -30,7 +35,7 @@ const Navbar = () => {
               smooth
               duration={500}
               offset={-70}
-              className="hover:text-cyan-400 transition-colors cursor-pointer"
+              className="hover:text-secondary cursor-pointer transition-colors"
             >
               {link.name}
             </Link>
@@ -39,15 +44,19 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
+          <button
+            className="btn btn-square btn-ghost"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-[#4A148C] px-6 pb-4 pt-2 flex flex-col space-y-4">
+        <div className="bg-primary text-primary-content flex flex-col md:hidden space-y-4 px-6 py-4 shadow-lg">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -56,7 +65,7 @@ const Navbar = () => {
               duration={500}
               offset={-70}
               onClick={() => setIsOpen(false)}
-              className="text-lg font-medium hover:text-cyan-400 cursor-pointer"
+              className="text-xl font-semibold hover:text-secondary cursor-pointer transition-colors"
             >
               {link.name}
             </Link>

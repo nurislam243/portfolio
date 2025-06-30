@@ -1,0 +1,141 @@
+[
+  {
+    "id": 1,
+    "name": "TechTinker",
+    "image": "https://raw.githubusercontent.com/nurislam243/TechTinker-client-side/refs/heads/main/src/assets/Screenshot%20(117).png",
+    "liveLink": "https://techtinker2.web.app/",
+    "clientRepo": "https://github.com/nurislam243/TechTinker-client-side",
+    "serverRepo": "https://github.com/Programming-Hero-Web-Course4/b11a11-server-side-nurislam243",
+    "description": "TechTinker is a full-featured, responsive service-sharing web application where users can offer and book various tech device-related services. The platform focuses on smooth user experience, secure authentication, and seamless service interactions with modern UI/UX design.",
+    "features": [
+      "🔐 Secure Authentication with Firebase (Email/Password & Google Sign-In)",
+      "➕ Add, update, and delete services by providers",
+      "📦 Book tech services with full details",
+      "🧾 Status tracking: Pending → Working → Completed",
+      "🧑‍🤝‍🧑 Personalized user dashboard with 4 protected routes",
+      "🔍 Search services by name with instant results",
+      "🌓 Theme toggle: Light/Dark mode with persistence",
+      "🛡️ JWT-based route protection for secure access",
+      "💬 Beautiful alerts with SweetAlert2 for user actions",
+      "📱 Mobile-first responsive design",
+      "🧠 Persistent login using JWT",
+      "🧢 Dynamic page titles using React Helmet Async",
+      "🚫 Custom 404 page for invalid routes",
+      "⭐ Service review & star rating system",
+      "🔽 Scroll-based navbar shrink effect",
+      "🧲 Smooth sticky scroll effects"
+    ],
+    "technologies": [
+      "React.js",
+      "Tailwind CSS",
+      "DaisyUI",
+      "React Router DOM",
+      "Axios",
+      "Firebase Authentication",
+      "React Firebase Hooks",
+      "React Tooltip",
+      "React Helmet Async",
+      "React Rating",
+      "Framer Motion",
+      "React Awesome Reveal",
+      "React Lottie",
+      "Date-fns",
+      "SweetAlert2"
+    ],
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT (jsonwebtoken)",
+      "dotenv",
+      "CORS"
+    ],
+    "deployment": {
+      "client": "Firebase Hosting",
+      "server": "Vercel"
+    }
+  },
+  {
+    "id": 2,
+    "name": "HobbEx",
+    "image": "https://raw.githubusercontent.com/nurislam243/hobbex-client-side/refs/heads/main/src/assets/Screenshot_95.png",
+    "liveLink": "https://hobbex-c8104.web.app/",
+    "clientRepo": "https://github.com/nurislam243/hobbex-client-side",
+    "serverRepo": "https://github.com/Programming-Hero-Web-Course4/b11a10-server-side-nurislam243",
+    "description": "HobbEx is a responsive web application that helps users discover, create, and join local hobby groups such as painting circles, reading clubs, or hiking crews. It encourages community bonding based on shared hobbies.",
+    "features": [
+      "🔐 Authentication with Firebase (Email & Google Login)",
+      "🎯 Create, Update, and Delete Hobby Groups",
+      "📅 Past-date protection & personalized group management",
+      "💡 Light/Dark mode with persistence",
+      "🛡️ Protected Private Routes for logged-in users",
+      "📱 100% responsive and accessible design"
+    ],
+    "technologies": [
+      "React.js",
+      "React Router DOM",
+      "Firebase Authentication",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "DaisyUI"
+    ],
+    "enhancements": [
+      "Swiper JS",
+      "Lottie React",
+      "React Awesome Reveal",
+      "React Simple Typewriter",
+      "React Tooltip",
+      "React Icons",
+      "SweetAlert2",
+      "React Toastify",
+      "React Helmet",
+      "date-fns"
+    ],
+    "deployment": {
+      "client": "Firebase Hosting",
+      "server": "Vercel"
+    }
+  },
+  {
+    "id": 3,
+    "name": "AppVerse",
+    "image": "https://raw.githubusercontent.com/nurislam243/AppVerse/refs/heads/main/src/assets/Screenshot_96.png",
+    "liveLink": "https://appverse-8230a.web.app/",
+    "clientRepo": "https://github.com/nurislam243/AppVerse",
+    "description": "AppVerse is a next-generation AppStore platform built with React where users can explore trending apps, browse by categories, install apps, and share their reviews. It focuses on delivering a seamless and interactive app discovery experience.",
+    "features": [
+      "🔥 Browse and Discover Trending Apps",
+      "🎯 Filter Apps by Categories (Education, Gaming, Productivity)",
+      "✅ Secure Authentication (Email/Password & Google Login)",
+      "🔒 Protected Routes with Firebase Authentication",
+      "🌟 5-Star App Review System with Comments",
+      "📱 Fully Responsive for Mobile, Tablet, and Desktop",
+      "🛠️ One-Click App Install/Uninstall Toggle",
+      "✍️ Edit User Profile (Name & Photo)",
+      "🎉 Sweet Alerts and Toast Notifications",
+      "🚫 Custom 404 Not Found Page",
+      "📈 Fast Loading and SEO Friendly"
+    ],
+    "technologies": [
+      "React.js",
+      "Tailwind CSS",
+      "CSS",
+      "JavaScript",
+      "Firebase (Auth + Hosting)"
+    ],
+    "enhancements": [
+      "React Router DOM",
+      "Swiper JS",
+      "DaisyUI",
+      "SweetAlert2",
+      "React Icons",
+      "Milify",
+      "React Helmet Async",
+      "React Toastify"
+    ],
+    "deployment": {
+      "client": "Firebase Hosting"
+    }
+  }
+]
