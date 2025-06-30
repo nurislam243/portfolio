@@ -1,6 +1,7 @@
 import React from 'react';
 
 const About = () => {
+  // jdfjsf sjdfsdflk fkdf lkfjlfk lkjdfl 
   return (
     <section
       id="about"
