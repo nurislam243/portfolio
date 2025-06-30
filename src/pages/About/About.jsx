@@ -31,7 +31,7 @@ const About = () => {
           <div className="flex-1 bg-base-100 p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-semibold text-primary mb-6 text-center">
               Skills & Technologies
-              {/* kddkfsdkf kdfd fklf */}
+              
             </h3>
             <ul className="list-disc list-inside space-y-3 text-base text-gray-700">
               <li>React.js </li>
