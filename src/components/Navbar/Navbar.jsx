@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { NavLink } from 'react-router';
 import { Link } from 'react-scroll';
 
 const Navbar = () => {
@@ -35,7 +36,9 @@ const Navbar = () => {
               smooth
               duration={500}
               offset={-70}
-              className="hover:text-secondary cursor-pointer transition-colors"
+              spy={true}
+              activeClass='text-primary'
+              className="hover:text-primary/80 cursor-pointer transition-colors"
             >
               {link.name}
             </Link>
@@ -61,11 +64,13 @@ const Navbar = () => {
             <Link
               key={link.name}
               to={link.to}
+              spy={true}
               smooth
               duration={500}
               offset={-70}
               onClick={() => setIsOpen(false)}
-              className="text-xl font-semibold hover:text-secondary cursor-pointer transition-colors"
+              activeClass="text-primary"
+              className="text-xl font-semibold hover:text-primary/80 cursor-pointer transition-colors"
             >
               {link.name}
             </Link>

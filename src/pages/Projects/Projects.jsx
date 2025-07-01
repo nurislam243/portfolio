@@ -26,7 +26,7 @@ const Projects = () => {
   if (error) return <p className="text-center py-10 text-red-600">Error: {error}</p>;
 
   return (
-    <section id="projects" className="bg-base-200 py-20 px-4 @min-[400px]:px-6 @min-[500px]:px-7 @min-[600px]:px-9 @min-[900px]:px-10 @min-[1100px]:px-[52px] @min-[1400px]:px-0">
+    <section id="projects" className="pt-[100px] sm:pt-[120px] bg-base-200 px-4 @min-[400px]:px-6 @min-[500px]:px-7 @min-[600px]:px-9 @min-[900px]:px-10 @min-[1100px]:px-[52px] @min-[1400px]:px-0">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-primary text-center mb-14">My Projects</h2>
 
