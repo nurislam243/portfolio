@@ -1,8 +1,8 @@
 import { FaGithub, FaLinkedin,  FaFacebook, FaTwitter } from 'react-icons/fa';
 
-const SocialLink = () => {
+const SocialLink = ({style}) => {
     return (
-      <div className="flex justify-center gap-6 mb-4 text-xl">
+      <div className={`flex justify-center mb-4 ${style}`}>
         <a href="https://github.com/nurislam243" target="_blank" rel="noreferrer">
           <FaGithub className="hover:text-black transition" />
         </a>

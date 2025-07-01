@@ -1,6 +1,7 @@
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import nur from '../../assets/nurislam1.png'
+import nur from '../../assets/nurislam1.png';
+import { FaDownload } from 'react-icons/fa';
 import SocialLink from '../../components/Shared/SocialLink';
 
 const Home = () => {
@@ -29,15 +30,18 @@ const Home = () => {
 
           {/* Buttons and Socials */}
           <div className="mt-8  flex items-center gap-6 justify-center md:justify-start">
-            <div className="">
-              <SocialLink></SocialLink>
-              <a
-                href="/resume.pdf"
-                download
-                className="btn btn-primary btn-wide text-white font-semibold shadow-lg hover:shadow-xl"
-              >
-                Download Resume
-              </a>
+            <div className="flex flex-col @min-[490px]:flex-row gap-4">              
+              <div className="">
+                <a
+                  href="/resume.pdf"
+                  download
+                  className="flex gap-1 px-3 py-1.5 rounded justify-center  bg-primary items-center"
+                >
+                  <FaDownload></FaDownload> Resume
+                </a>
+              </div>
+
+              <SocialLink style={`space-x-6 lg:space-x-7 text-2xl  @min-[490px]:text-3xl`}></SocialLink>
             </div>
           </div>
         </div>
@@ -49,7 +53,7 @@ const Home = () => {
           className="flex-1 flex justify-end"
         >
           <div className="avatar mx-auto md:mx-0">
-            <div className="w-[300px] h-[376px] shadow-primary shadow-lg border-primary border-l-9 border-b-9 border rounded-tl-[50px] rounded-br-[50px]">
+            <div className="w-[200px] @min-[308px]:w-[250px] @min-[370px]:w-[300px] h-[300px] @min-[308px]:h-[350px] @min-[370px]:h-[376px] shadow-primary shadow-lg border-primary border-l-9 border-b-9 border rounded-tl-[50px] rounded-br-[50px]">
               <img
                 src={nur}
                 alt="Md Nur Islam"
