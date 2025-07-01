@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import nur from '../../assets/nurislam1.png';
 import { FaDownload } from 'react-icons/fa';
 import SocialLink from '../../components/Shared/SocialLink';
+import { Typewriter } from 'react-simple-typewriter';
 
 const Home = () => {
   return (
@@ -21,8 +22,19 @@ const Home = () => {
             Hi, I'm <span className="text-primary">Nur Islam</span>
           </h1>
           <h2 className="text-2xl sm:text-3xl font-semibold mt-3">
-            Crafting seamless web experiences with{' '}
-            <span className="bold"><span className='text-primary'>MERN</span> Stack </span>magic
+            Crafting seamless web experiences with <br /> {' '}
+            <span className="text-primary font-bold">
+              <Typewriter
+                words={['MERN Stack', 'React.js', 'Tailwind CSS']}
+                loop={0}
+                cursor
+                cursorStyle="|"
+                typeSpeed={60}
+                deleteSpeed={40}
+                delaySpeed={1500}
+              />
+            </span>{' '}
+            magic
           </h2>
           <p className="mt-6 max-w-md mx-auto md:mx-0 text-lg font-light">
             Passionate about building user-friendly, responsive, and accessible web interfaces that make a difference.
@@ -53,7 +65,7 @@ const Home = () => {
           className="flex-1 flex justify-end"
         >
           <div className="avatar mx-auto md:mx-0">
-            <div className="w-[200px] @min-[308px]:w-[250px] @min-[370px]:w-[300px] h-[300px] @min-[308px]:h-[350px] @min-[370px]:h-[376px] shadow-primary shadow-lg border-primary border-l-9 border-b-9 border rounded-tl-[50px] rounded-br-[50px]">
+            <div className="w-[200px] @min-[308px]:w-[250px] @min-[370px]:w-[300px] h-[300px] @min-[308px]:h-[350px] @min-[370px]:h-[376px] mb-[60px] md:mb-0 shadow-primary shadow-lg border-primary border-l-9 border-b-9 border rounded-tl-[50px] rounded-br-[50px]">
               <img
                 src={nur}
                 alt="Md Nur Islam"

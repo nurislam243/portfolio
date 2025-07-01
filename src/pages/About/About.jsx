@@ -16,7 +16,7 @@ const About = () => {
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* left side */}
           <div className="flex-1 flex justify">
-            <Lottie className='w-[420px]' animationData={aboutAnimation} loop={true} />
+            <Lottie className=' lg:w-[420px]' animationData={aboutAnimation} loop={true} />
           </div>
 
           {/* right side */}
