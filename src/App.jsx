@@ -1,3 +1,5 @@
+
+import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
@@ -8,31 +10,36 @@ import Skills from "./pages/Skills/Skills";
 
 function App() {
   return (
-    <>
-      <Navbar />
+    <div className="@container">
+      {/* header section */}
+      <Navbar></Navbar>
 
+      {/* main section */}
       <main className="pt-20">
         <section id="home">
-          <Home />
+          <Home></Home>
         </section>
 
         <section id="about">
-          <About />
+          <About ></About>
         </section>
 
         <section id="skills">
-          <Skills />
+          <Skills></Skills>
         </section>
 
         <section id="projects">
-          <Projects />
+          <Projects></Projects>
         </section>
 
         <section id="contact">
-          <Contact />
+          <Contact></Contact>
         </section>
       </main>
-    </>
+
+      {/* footer section */}
+      <Footer></Footer>
+    </div>
   );
 }
 

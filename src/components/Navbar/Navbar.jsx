@@ -14,16 +14,16 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="fixed bg-primary h-[79px] top-0 left-0 w-full z-50 shadow-lg">
-      <div className="navbar text-primary-content max-w-7xl mx-auto px-4 py-4 flex justify-between">
+    <header className="fixed bg-base-200 h-[79px] top-0 left-0 w-full z-50 shadow-lg">
+      <div className="navbar text-base-content max-w-7xl mx-auto px-4 @min-[400px]:px-6 @min-[500px]:px-7 @min-[600px]:px-9 @min-[900px]:px-10 @min-[1100px]:px-[52px] @min-[1400px]:px-0 py-4 flex justify-between">
         {/* Logo */}
         <Link
           to="home"
           smooth
           duration={500}
-          className="btn btn-ghost normal-case text-3xl font-bold cursor-pointer"
+          className="normal-case text-3xl font-bold cursor-pointer"
         >
-          Nur<span className="text-secondary">Islam</span>
+          Nur<span className="text-primary">Islam</span>
         </Link>
 
         {/* Desktop Menu */}
@@ -56,7 +56,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="bg-primary text-primary-content flex flex-col md:hidden space-y-4 px-6 py-4 shadow-lg">
+        <div className="bg-base-200 text-base-content flex flex-col md:hidden space-y-4 px-6 py-4 shadow-lg">
           {navLinks.map((link) => (
             <Link
               key={link.name}

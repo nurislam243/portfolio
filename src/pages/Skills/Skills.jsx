@@ -35,8 +35,8 @@ const SkillBar = ({ skill }) => (
 
 const Skills = () => {
   return (
-    <section id="skills" className="min-h-screen bg-base-200 px-6 py-16">
-      <div className="max-w-7xl px-4 mx-auto">
+    <section id="skills" className="min-h-screen bg-base-200 px-4 @min-[400px]:px-6 @min-[500px]:px-7 @min-[600px]:px-9 @min-[900px]:px-10 @min-[1100px]:px-[52px] @min-[1400px]:px-0 py-16">
+      <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-primary mb-10 text-center">
           Skills
         </h2>

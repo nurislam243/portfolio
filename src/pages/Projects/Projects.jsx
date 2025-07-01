@@ -26,22 +26,22 @@ const Projects = () => {
   if (error) return <p className="text-center py-10 text-red-600">Error: {error}</p>;
 
   return (
-    <section id="projects" className="bg-base-200 py-20 px-6">
-      <div className="max-w-7xl px-4 mx-auto">
+    <section id="projects" className="bg-base-200 py-20 px-4 @min-[400px]:px-6 @min-[500px]:px-7 @min-[600px]:px-9 @min-[900px]:px-10 @min-[1100px]:px-[52px] @min-[1400px]:px-0">
+      <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-primary text-center mb-14">My Projects</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col"
+              className="card bg-base-100/5  border-1 border-primary shadow-primary hover:shadow-lg transition-shadow duration-300 flex flex-col"
             >
               <div className="w-full">
                 <figure className="relative h-64">
                   <img
                     src={project.image}
                     alt={project.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover rounded-t-lg"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-4 py-2">
                     <h3 className="text-xl text-white font-bold">{project.name}</h3>
@@ -50,7 +50,7 @@ const Projects = () => {
               </div>
 
               <div className="card-body w-full overflow-y-auto max-h-64">
-                <p className="text-gray-700 mb-4">{project.description}</p>
+                <p className="text-base-content/80 mb-4">{project.description}</p>
                 <div className="flex justify-between flex-wrap gap-3">
                   <a
                     href={project.liveLink}
