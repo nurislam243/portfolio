@@ -103,7 +103,7 @@ const Skills = () => {
           Skills
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid @min-[600px]:grid-cols-2 @min-[1000px]:grid-cols-3  @min-[1240px]:grid-cols-4 gap-10">
           {/* Frontend Skills */}
           <div className="card bg-base-100 shadow-lg p-6 rounded-lg">
             <h3 className="text-2xl font-semibold text-primary mb-6 text-center">
