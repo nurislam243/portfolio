@@ -1,22 +1,35 @@
 import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      delay: i * 0.15,
+    },
+  }),
+};
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
-  const [selectedProject, setSelectedProject] = useState(null); // modal er jonno
+  const [selectedProject, setSelectedProject] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch('./projects.json')
-      .then(res => {
+      .then((res) => {
         if (!res.ok) throw new Error('Failed to fetch projects data');
         return res.json();
       })
-      .then(data => {
+      .then((data) => {
         setProjects(data);
         setLoading(false);
       })
-      .catch(error => {
+      .catch((error) => {
         setError(error.message);
         setLoading(false);
       });
@@ -26,15 +39,25 @@ const Projects = () => {
   if (error) return <p className="text-center py-10 text-red-600">Error: {error}</p>;
 
   return (
-    <section id="projects" className="pt-[100px] sm:pt-[120px] bg-base-200 px-4 @min-[400px]:px-6 @min-[500px]:px-7 @min-[600px]:px-9 @min-[900px]:px-10 @min-[1100px]:px-[52px] @min-[1400px]:px-0">
+    <section
+      id="projects"
+      className="pt-[100px] sm:pt-[120px] bg-base-200 px-4 @min-[400px]:px-6 @min-[500px]:px-7 @min-[600px]:px-9 @min-[900px]:px-10 @min-[1100px]:px-[52px] @min-[1400px]:px-0"
+    >
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-primary text-center mb-14">My Projects</h2>
+        <h2 className="text-4xl font-bold text-primary text-center mb-14">
+          My Projects
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {projects.map((project) => (
-            <div
+          {projects.map((project, i) => (
+            <motion.div
               key={project.id}
-              className="card bg-base-100/5  border-1 border-primary shadow-primary hover:shadow-lg transition-shadow duration-300 flex flex-col"
+              className="card bg-base-100/5 border border-primary shadow-primary hover:shadow-lg transition-shadow duration-300 flex flex-col"
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              custom={i}
+              viewport={{ once: true, amount: 0.3 }}
             >
               <div className="w-full">
                 <figure className="relative h-64">
@@ -76,7 +99,7 @@ const Projects = () => {
                   </button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -95,13 +118,11 @@ const Projects = () => {
             </form>
 
             <h3 className="font-bold text-2xl mb-4">{selectedProject.name}</h3>
-
             <img
               src={selectedProject.image}
               alt={selectedProject.name}
               className="rounded w-full mb-4"
             />
-
             <p className="mb-4">{selectedProject.description}</p>
 
             {selectedProject.features && (

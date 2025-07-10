@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   FaReact,
   FaHtml5,
@@ -29,21 +29,21 @@ const skillsData = {
     { name: 'CSS3 & Tailwind CSS', level: 90 },
   ],
   backend: [
-    { name: 'Node.js', level: 80 },
+    { name: 'Node.js', level: 50 },
     { name: 'Express.js', level: 80 },
     { name: 'MongoDB', level: 75 },
   ],
   tools: [
     { name: 'Git & GitHub', level: 85 },
     { name: 'VS Code', level: 90 },
-    { name: 'Postman', level: 70 },
+    { name: 'Postman', level: 50 },
   ],
   learning: [
-    { name: 'TypeScript', level: 40 },
-    { name: 'Next.js', level: 35 },
-    { name: 'Redux', level: 50 },
-    { name: 'Mongoose', level: 30 },
-    { name: 'Framer Motion', level: 45 },
+    { name: 'TypeScript', level: 30 },
+    { name: 'Next.js', level: 0 },
+    { name: 'Redux', level: 0 },
+    { name: 'Mongoose', level: 0 },
+    { name: 'Framer Motion', level: 35 },
   ],
 };
 
@@ -75,22 +75,54 @@ const skillIcons = {
   'Framer Motion': <SiFramer className="text-pink-500 text-xl" />,
 };
 
-const SkillBar = ({ skill }) => (
-  <div className="mb-4">
-    <div className="flex justify-between items-center mb-1">
-      <div className="flex items-center gap-2 text-base-content font-medium">
-        <span>{skillIcons[skill.name]}</span>
-        <span>{skill.name}</span>
+const SkillBar = ({ skill }) => {
+  const [visible, setVisible] = useState(false);
+  const ref = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div className="mb-4" ref={ref}>
+      <div className="flex justify-between items-center mb-1">
+        <div className="flex items-center gap-2 text-base-content font-medium">
+          <span>{skillIcons[skill.name]}</span>
+          <span>{skill.name}</span>
+        </div>
+        <span className="text-gray-600">{skill.level}%</span>
       </div>
-      <span className="text-gray-600">{skill.level}%</span>
+
+      {/* Custom animated progress bar */}
+      <div className="w-full h-3 bg-gray-300 rounded-full overflow-hidden">
+        <div
+          className="h-full bg-primary rounded-full transition-all duration-1000 ease-out"
+          style={{
+            width: visible ? `${skill.level}%` : '0%',
+          }}
+        ></div>
+      </div>
     </div>
-    <progress
-      className="progress progress-primary w-full"
-      value={skill.level}
-      max="100"
-    ></progress>
-  </div>
-);
+  );
+};
 
 const Skills = () => {
   return (
@@ -103,7 +135,7 @@ const Skills = () => {
           Skills
         </h2>
 
-        <div className="grid @min-[600px]:grid-cols-2 @min-[1000px]:grid-cols-3  @min-[1240px]:grid-cols-4 gap-10">
+        <div className="grid @min-[600px]:grid-cols-2 @min-[1000px]:grid-cols-3 @min-[1240px]:grid-cols-4 gap-10">
           {/* Frontend Skills */}
           <div className="card bg-base-100 shadow-lg p-6 rounded-lg">
             <h3 className="text-2xl font-semibold text-primary mb-6 text-center">
