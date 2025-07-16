@@ -45,7 +45,7 @@ const Home = () => {
             <div className="flex flex-col @min-[490px]:flex-row gap-4">              
               <div className="">
                 <a
-                  href="https://drive.google.com/file/d/1-vYxSvaOTwdGj0zndOvVkTrwkJzmcC_2/view"
+                  href="https://drive.google.com/file/d/1uQpwXBAV1hPAtFnyVCZYBb-pzG2_bGuQ/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex gap-1 px-3 py-1.5 rounded justify-center  bg-primary items-center"
